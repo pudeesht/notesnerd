@@ -5,7 +5,7 @@ import { saveNote, type FormState } from "@/app/actions";
 import { Markdown } from "@/components/Markdown";
 import { MarkdownHelp } from "@/components/MarkdownHelp";
 import { uploadImage } from "@/lib/images";
-import { DSA_TEMPLATE, type Note } from "@/lib/notes";
+import type { Note } from "@/lib/notes";
 
 const input =
   "w-full rounded-md border border-neutral-300 bg-transparent px-3 py-2 outline-none focus:border-neutral-500 dark:border-neutral-700 dark:focus:border-neutral-400";
@@ -60,14 +60,14 @@ export function NoteForm({ note }: { note?: Note }) {
         maxLength={300}
         autoFocus={!note}
         defaultValue={note?.title}
-        placeholder="Title, e.g. LC 146 · LRU Cache"
+        placeholder="Title"
         className={`${input} text-lg font-semibold`}
       />
 
       <input
         name="tags"
         defaultValue={note?.tags.join(", ")}
-        placeholder="Tags, comma separated: dp, graphs"
+        placeholder="Tags, comma separated"
         className={input}
       />
 
@@ -95,15 +95,6 @@ export function NoteForm({ note }: { note?: Note }) {
           >
             Markdown help
           </button>
-          {!body.trim() && (
-            <button
-              type="button"
-              onClick={() => setBody(DSA_TEMPLATE)}
-              className="rounded px-3 py-1 text-neutral-500 hover:text-neutral-800 dark:hover:text-neutral-200"
-            >
-              Use DSA template
-            </button>
-          )}
           <button
             type="button"
             onClick={() => fileRef.current?.click()}

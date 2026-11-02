@@ -1,6 +1,6 @@
 # notesnerd
 
-DSA approaches and random notes — write in Markdown, tag, search, read from anywhere.
+Notes — write in Markdown, tag, search, read from anywhere.
 Anyone with the link can read; only you can write.
 
 **Stack:** Next.js (App Router) · Supabase (Postgres + Auth + full-text search) · Vercel.
@@ -10,7 +10,7 @@ Anyone with the link can read; only you can write.
 - Notes with title, tags, Markdown body (syntax-highlighted code)
 - Search across titles, bodies and tags (full-text + partial matches), filter by tag
 - Images: paste (Ctrl+V), drag-drop or "Add image" — stored in Supabase Storage
-- "Use DSA template" button, Write/Preview tabs, Markdown help, Ctrl/⌘+Enter to save
+- Write/Preview tabs, Markdown help, Ctrl/⌘+Enter to save
 - `/random` to resurface an old note
 
 ## One-time setup

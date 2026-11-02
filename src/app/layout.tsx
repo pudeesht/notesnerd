@@ -11,7 +11,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export const metadata: Metadata = {
   title: { default: "notesnerd", template: "%s · notesnerd" },
-  description: "DSA approaches and random notes, searchable from anywhere.",
+  description: "Notes, searchable from anywhere.",
 };
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

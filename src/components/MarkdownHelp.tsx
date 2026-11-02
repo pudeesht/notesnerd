@@ -1,17 +1,17 @@
 import { Markdown } from "@/components/Markdown";
 
 const ROWS: [string, string][] = [
-  ["Heading", "## Approach\n### Smaller heading"],
+  ["Heading", "## Heading\n### Smaller heading"],
   ["Bold / italic", "**bold** and *italic*"],
   ["Bullet points", "- first point\n- second point"],
   ["Sub-points (indent 2 spaces, or press Tab)", "- main point\n  - sub-point\n    - sub-sub-point"],
-  ["Numbered list", "1. sort the array\n2. two pointers\n   - indent 3 spaces under numbers"],
-  ["Inline code", "use `dp[i][j]` here"],
-  ["Code block (language after ```)", "```cpp\nint x = 0;\n```"],
-  ["Quote / callout", "> watch out for overflow"],
-  ["Link", "[LeetCode](https://leetcode.com)"],
-  ["Table", "| case | time |\n|---|---|\n| avg | O(n) |"],
-  ["Checklist", "- [x] brute force\n- [ ] optimize"],
+  ["Numbered list", "1. first step\n2. second step\n   - indent 3 spaces under numbers"],
+  ["Inline code", "run `npm install` first"],
+  ["Code block (language after ```)", "```python\nprint(\"hello\")\n```"],
+  ["Quote / callout", "> remember this"],
+  ["Link", "[Google](https://google.com)"],
+  ["Table", "| name | value |\n|---|---|\n| a | 1 |"],
+  ["Checklist", "- [x] done\n- [ ] to do"],
   ["Divider", "---"],
   ["New paragraph", "leave a blank line\n\nbetween paragraphs"],
 ];

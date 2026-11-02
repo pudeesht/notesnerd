@@ -33,22 +33,3 @@ export function plainSnippet(markdown: string, max = 160): string {
 export function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
 }
-
-export const DSA_TEMPLATE = `## Problem
-<!-- one-line summary, constraints that matter -->
-
-## Key insight
-<!-- the "aha" — what made it click -->
-
-## Approach
-1.
-
-## Complexity
-- Time: O()
-- Space: O()
-
-## Code
-\`\`\`cpp
-
-\`\`\`
-`;
