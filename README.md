@@ -11,7 +11,6 @@ Anyone with the link can read; only you can write.
 - Search across titles, bodies and tags (full-text + partial matches), filter by tag
 - Images: paste (Ctrl+V), drag-drop or "Add image" — stored in Supabase Storage
 - Write/Preview tabs, Markdown help, Ctrl/⌘+Enter to save
-- `/random` to resurface an old note
 
 ## One-time setup
 

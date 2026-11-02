@@ -25,9 +25,6 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
             <Link href="/" className="mr-auto text-lg font-bold tracking-tight">
               notesnerd
             </Link>
-            <Link href="/random" className="text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100">
-              Random
-            </Link>
             {user ? (
               <>
                 <form action={logout}>
