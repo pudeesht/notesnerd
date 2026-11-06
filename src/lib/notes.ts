@@ -30,6 +30,11 @@ export function plainSnippet(markdown: string, max = 160): string {
   return text.length > max ? `${text.slice(0, max)}…` : text;
 }
 
+/** Escapes LIKE wildcards so user text matches literally. */
+export function escapeLike(text: string): string {
+  return text.replace(/[\\%_]/g, "\\$&");
+}
+
 export function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
-import { logout } from "@/app/actions";
+import { createNote, logout } from "@/app/actions";
 import { getUser } from "@/lib/supabase";
 import "highlight.js/styles/github-dark.css";
 import "./globals.css";
@@ -30,12 +30,11 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
                 <form action={logout}>
                   <button className="text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100">Log out</button>
                 </form>
-                <Link
-                  href="/new"
-                  className="rounded-md bg-neutral-900 px-3 py-1.5 font-medium text-white dark:bg-neutral-100 dark:text-neutral-900"
-                >
-                  + New
-                </Link>
+                <form action={createNote}>
+                  <button className="rounded-md bg-neutral-900 px-3 py-1.5 font-medium text-white dark:bg-neutral-100 dark:text-neutral-900">
+                    + New
+                  </button>
+                </form>
               </>
             ) : (
               <Link href="/login" className="text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100">

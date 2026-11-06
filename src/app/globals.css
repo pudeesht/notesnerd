@@ -33,3 +33,14 @@ body {
   border-radius: 0.5rem;
   font-size: 0.85rem;
 }
+
+/* [[Wiki links]]: solid when the note exists, dashed when it doesn't yet (click to create). */
+.prose .wikilink {
+  text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+  text-underline-offset: 3px;
+}
+.prose .wikilink-missing {
+  opacity: 0.6;
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+}

@@ -10,6 +10,7 @@ const ROWS: [string, string][] = [
   ["Code block (language after ```)", "```python\nprint(\"hello\")\n```"],
   ["Quote / callout", "> remember this"],
   ["Link", "[Google](https://google.com)"],
+  ["Link to another note (type [[ for suggestions)", "[[Note title]]\n[[Note title|shown text]]"],
   ["Table", "| name | value |\n|---|---|\n| a | 1 |"],
   ["Checklist", "- [x] done\n- [ ] to do"],
   ["Divider", "---"],

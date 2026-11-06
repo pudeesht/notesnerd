@@ -10,7 +10,10 @@ Anyone with the link can read; only you can write.
 - Notes with title, tags, Markdown body (syntax-highlighted code)
 - Search across titles, bodies and tags (full-text + partial matches), filter by tag
 - Images: paste (Ctrl+V), drag-drop or "Add image" — stored in Supabase Storage
-- Write/Preview tabs, Markdown help, Ctrl/⌘+Enter to save
+- No separate edit mode: click the text to edit it in place, Esc or click away to read; autosaves
+- Obsidian-style `[[Note title]]` links with `[[` autocomplete, "Linked from" backlinks, and
+  dashed links to notes that don't exist yet (click one to create it); renaming a note updates links to it
+- Checklists are clickable while reading; Markdown help; Ctrl/⌘+E toggle editing, Ctrl/⌘+S save now
 
 ## One-time setup
 
