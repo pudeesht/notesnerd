@@ -5,11 +5,15 @@ export type Note = {
   body: string;
   created_at: string;
   updated_at: string;
+  pinned_at: string | null;
 };
 
-export type NoteSummary = Omit<Note, "body"> & { snippet: string };
+export type NoteSummary = Omit<Note, "body" | "pinned_at"> & { snippet: string };
 
-export const NOTE_COLUMNS = "id, title, tags, body, created_at, updated_at";
+export const NOTE_COLUMNS = "id, title, tags, body, created_at, updated_at, pinned_at";
+
+/** Most notes that can be pinned at once (also enforced in supabase/pins.sql). */
+export const MAX_PINNED = 3;
 
 /** "DP, graphs,  Two Pointers" → ["dp", "graphs", "two-pointers"] */
 export function parseTags(raw: string): string[] {

@@ -5,6 +5,7 @@ import { createNote, renameLinksTo, saveNote, type NoteFields } from "@/app/acti
 import { DeleteButton } from "@/components/DeleteButton";
 import { Markdown } from "@/components/Markdown";
 import { MarkdownHelp } from "@/components/MarkdownHelp";
+import { PinButton } from "@/components/PinButton";
 import { caretCoords } from "@/lib/caret";
 import { uploadImage } from "@/lib/images";
 import { formatDate, type Note } from "@/lib/notes";
@@ -322,6 +323,7 @@ export function NoteEditor({ note, allNotes, startEditing }: Props) {
             <button type="button" onClick={() => fileRef.current?.click()} className={toolButton}>
               Add image
             </button>
+            <PinButton id={note.id} pinned={Boolean(note.pinned_at)} />
             <span className="px-2">
               <DeleteButton id={note.id} />
             </span>

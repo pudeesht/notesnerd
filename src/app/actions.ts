@@ -68,6 +68,24 @@ export async function renameLinksTo(from: string, to: string): Promise<void> {
   revalidatePath("/");
 }
 
+/** Pins a note to the top of the list (max 3, enforced by the database) or unpins it. */
+export async function setPinned(id: string, pinned: boolean): Promise<{ error?: string }> {
+  const supabase = await createClient();
+  const { error } = await supabase
+    .from("notes")
+    .update({ pinned_at: pinned ? new Date().toISOString() : null })
+    .eq("id", id)
+    .select("id")
+    .single();
+  if (error) {
+    if (error.code === "P0001") return { error: error.message }; // pin limit from the trigger
+    return { error: error.code === "PGRST116" || error.code === "42501" ? NOT_ALLOWED : error.message };
+  }
+  revalidatePath("/");
+  revalidatePath(`/notes/${id}`);
+  return {};
+}
+
 export async function deleteNote(formData: FormData) {
   const supabase = await createClient();
   await supabase.from("notes").delete().eq("id", String(formData.get("id")));

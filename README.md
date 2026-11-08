@@ -13,6 +13,7 @@ Anyone with the link can read; only you can write.
 - No separate edit mode: click the text to edit it in place, Esc or click away to read; autosaves
 - Obsidian-style `[[Note title]]` links with `[[` autocomplete, "Linked from" backlinks, and
   dashed links to notes that don't exist yet (click one to create it); renaming a note updates links to it
+- Pin up to 3 notes to keep them at the top of the list
 - Checklists are clickable while reading; Markdown help; Ctrl/⌘+E toggle editing, Ctrl/⌘+S save now
 
 ## One-time setup
@@ -21,7 +22,8 @@ Anyone with the link can read; only you can write.
 
 1. Create a project at [supabase.com](https://supabase.com).
 2. **SQL Editor** → paste [`supabase/schema.sql`](supabase/schema.sql) → Run. Then do the same with
-   [`supabase/images.sql`](supabase/images.sql) (image uploads).
+   [`supabase/images.sql`](supabase/images.sql) (image uploads) and [`supabase/pins.sql`](supabase/pins.sql)
+   (pinned notes).
 3. **Authentication → Sign In / Providers** → turn **off** "Allow new users to sign up".
 4. **Authentication → Users → Add user** → create yourself with email + password (tick auto-confirm).
 5. Make yourself the admin — in the SQL Editor:
